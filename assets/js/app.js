@@ -1,4 +1,4 @@
-  $('.port-item').click(function () {
+$('.port-item').click(function () {
     $('.collapse').collapse('hide');
   });
 
@@ -12,11 +12,7 @@
 // Script for typewriter animation
 // List of sentences
 var _CONTENT = [
-	"👨🏻‍💻Amitabh Kumar",
-	"🚂JavaScrip,  🚃jQuery,  🚃Node.js",
-	"🚃React.js,  🚃AngularJS",  
-	"🚉MongoDB,  🚉MySQL",
-  "💽Github"
+	"React.js, Expres.js,  Node.js, MongoDB,  MySQL, JavaScript,  Github"
 ];
 
 // Current sentence being processed
