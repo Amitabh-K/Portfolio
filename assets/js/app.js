@@ -12,7 +12,7 @@ $('.port-item').click(function () {
 // Script for typewriter animation
 // List of sentences
 var _CONTENT = [
-	"React.js, Expres.js,  Node.js, MongoDB,  MySQL, JavaScript,  Github"
+	"React.js, Expres.js,  Node.js, MongoDB,  MySQL, Sequelize ORM, JavaScript, Jquery , HTML, CSS, Bootstrap, Handlebars, Ejs, Github"
 ];
 
 // Current sentence being processed
@@ -45,7 +45,7 @@ function Type() {
 		clearInterval(_INTERVAL_VAL);
 		setTimeout(function() {
 			_INTERVAL_VAL = setInterval(Delete, 50);
-		}, 1000);
+		}, 5000);
 	}
 }
 
