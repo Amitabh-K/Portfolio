@@ -208,30 +208,22 @@
   </footer>
 
 
-  <!-- VIDEO MODAL -->
-  <!-- <div class="modal fade" id="videoModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <button class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-          <iframe src="" frameborder="0" height="350" width="100%" allowfullscreen></iframe>
+
+  <!-- VIDEO PLAY -->
+  <section id="video-play">
+    <div class="dark-overlay">
+      <div class="row">
+        <div class="col">
+          <div class="container p-5">
+            <a href="#" class="video" data-video="https://www.youtube.com/embed/BAYB-Uoyyq4" data-toggle="modal" data-target="#videoModal">
+              <i class="fas fa-play fa-3x"></i>
+            </a>
+            <h1>My Video Profile</h1>
+          </div>
         </div>
       </div>
     </div>
-  </div> -->
-
-
-  <div class="modal fade" tabindex="-1" id="video_call_modal" role="dialog" aria-labelledby="Sign up view" data-backdrop="" aria-hidden="true" data-keyboard="false">
-    <div class="modal-dialog ">
-        <div class="modal-content">
-
-            <video autoplay id="chat_video"></video>
-
-        </div>
-    </div>
-</div>
+  </section>
 
 
 
@@ -274,11 +266,18 @@
     });
 
 
-    $("#chat_video").attr("src",window.URL.createObjectURL(Stream))
-     $("#video_call_modal").modal({keyboard:false})
-      $("#video_call_modal").modal('show')
+    $(".video-anchor").click(function () {
+  var modal = $(this).data("target");
+  var video = $(this).attr("data-video");
+  var autoVideo = video + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+  $(modal + ' iframe').attr('src', autoVideo);
+});
 
   </script>
+
+<script src="./assets/js/app.js"></script>
+
+
 
 
 </body>
