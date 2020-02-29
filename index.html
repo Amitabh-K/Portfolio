@@ -15,6 +15,14 @@
   <title>Amitabh Kumar</title>
 </head>
 
+
+
+<style>
+
+
+  
+</style>
+
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
@@ -159,66 +167,159 @@
   </section>
 
 
-  <!-- VIDEO PLAY -->
-  <section id="video-play">
-    <div class="dark-overlay">
-      <div class="row">
-        <div class="col">
-          <div class="container p-5">
-            <a href="" class="video" data-video="https://www.youtube.com/embed/BAYB-Uoyyq4" data-toggle="#modal" data-target="#videoModal">
-              <i class="fas fa-play fa-3x"></i>
-            </a>
-            <h1>My Video Profile</h1>
-          </div>
+ <!-- VIDEO PLAY -->
+ <section id="video-play">
+  <div class="dark-overlay">
+    <div class="row">
+      <div class="col">
+        <div class="container p-5">
+          <a href="#" class="video" data-video="https://www.youtube.com/embed/BAYB-Uoyyq4" data-toggle="modal" data-target="#videoModal">
+            <i class="fas fa-play fa-3x"></i>
+          </a>
+          <h1>My Video Profile</h1>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
-
-
-  <!-- NEWSLETTER -->
-  <section id="newsletter" class="text-center p-5 bg-dark text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h1>Leave your name and email and I will get back to you</h1>
-      
-          <form class="form-inline justify-content-center">
-            <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Name">
-            <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Email">
-            <button class="btn btn-primary mb-2">Submit</button>
-          </form>
-        </div>
+<!-- NEWSLETTER -->
+<section id="newsletter" class="text-center p-5 bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Leave your name and email and I will get back to you</h1>
+        <form class="form-inline justify-content-center">
+          <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Name">
+          <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Email">
+          <button class="btn btn-primary mb-2">Submit</button>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer id="main-footer" class="text-center p-4">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <p>Copyright &copy;
-            <span id="year"></span> Amitabh Kumar</p>
-        </div>
+<!-- FOOTER -->
+<footer id="main-footer" class="text-center p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p>Copyright &copy;
+          <span id="year"></span> Amitabh Kumar</p>
       </div>
     </div>
-  </footer>
-
- 
-
+  </div>
+</footer>
 
 
+<!-- VIDEO MODAL -->
+<div class="modal fade" id="videoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+        <iframe src="" frameborder="0" height="350" width="100%" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+<script>
+  // Get the current year for the copyright
+  $('#year').text(new Date().getFullYear());
+
+  // Configure Slider
+  $('.carousel').carousel({
+    interval: 6000,
+    pause: 'hover'
+  });
+
+  // Lightbox Init
+  $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
+
+  // Video Play
+  $(function () {
+    // Auto play modal video
+    $(".video").click(function () {
+      var theModal = $(this).data("target"),
+        videoSRC = $(this).attr("data-video"),
+        videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+      $(theModal + ' iframe').attr('src', videoSRCauto);
+      $(theModal + ' button.close').click(function () {
+        $(theModal + ' iframe').attr('src', videoSRC);
+      });
+    });
+  });
+
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+
+
+
+<script>
+  // Get the current year for the copyright
+  $('#year').text(new Date().getFullYear());
+
+  // Configure Slider
+  $('.carousel').carousel({
+    interval: 6000,
+    pause: 'hover'
+  });
+
+  // Lightbox Init
+  $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
+
+  // Video Play
+  $(function () {
+    // Auto play modal video
+    $(".video").click(function () {
+      var theModal = $(this).data("target"),
+        videoSRC = $(this).attr("data-video"),
+        videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+      $(theModal + ' iframe').attr('src', videoSRCauto);
+      $(theModal + ' button.close').click(function () {
+        $(theModal + ' iframe').attr('src', videoSRC);
+      });
+    });
+  });
+
+</script>
+
+
+
+
 
   <script>
     // Get the current year for the copyright
@@ -258,10 +359,111 @@
   $(modal + ' iframe').attr('src', autoVideo);
 });
 
+
+
+
+
+
+
+//skills
+
+
+$('.port-item').click(function () {
+    $('.collapse').collapse('hide');
+  });
+
+  $(document).on('click', '[data-toggle="lightbox"]', function (e) {
+    e.preventDefault();
+    $(this).ekkoLightbox();
+  });
+
   
+
+// Script for typewriter animation
+// List of sentences
+var _CONTENT = [
+	"React.js, Expres.js,  Node.js, MongoDB,  MySQL, Sequelize ORM, JavaScript, Jquery , HTML, CSS, Bootstrap, Handlebars, Ejs, Github"
+];
+
+// Current sentence being processed
+var _PART = 0;
+
+// Character number of the current sentence being processed
+var _PART_INDEX = 0;
+
+// Holds the handle returned from setInterval
+var _INTERVAL_VAL;
+
+// Element that holds the text
+var _ELEMENT = document.querySelector("#text");
+
+// Cursor element
+var _CURSOR = document.querySelector("#cursor");
+
+// Implements typing effect
+function Type() {
+	// Get substring with 1 characater added
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX++;
+
+	// If full sentence has been displayed then start to delete the sentence after some time
+	if(text === _CONTENT[_PART]) {
+		// Hide the cursor
+		_CURSOR.style.display = 'none';
+
+		clearInterval(_INTERVAL_VAL);
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Delete, 50);
+		}, 5000);
+	}
+}
+
+// Implements deleting effect
+function Delete() {
+	// Get substring with 1 characater deleted
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX--;
+
+	// If sentence has been deleted then start to display the next sentence
+	if(text === '') {
+		clearInterval(_INTERVAL_VAL);
+
+		// If current sentence was last then display the first one, else move to the next
+		if(_PART == (_CONTENT.length - 1))
+			_PART = 0;
+		else
+			_PART++;
+
+		_PART_INDEX = 0;
+
+		// Start to display the next sentence after some time
+		setTimeout(function() {
+			_CURSOR.style.display = 'inline-block';
+			_INTERVAL_VAL = setInterval(Type, 100);
+		}, 200);
+	}
+}
+
+// Start the typing effect on load
+_INTERVAL_VAL = setInterval(Type, 100);
+
+
+
+
+
+
+
+
 
 
   </script>
+
+
+
+
+
 
 </body>
 
