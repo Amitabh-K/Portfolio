@@ -1,5 +1,5 @@
 
-#last{
+#bag{
 z-index: 1;
 
 }
@@ -97,25 +97,25 @@ portfolio
 
 
 
-.col-md {
+.col-md-6 {
     padding: .5%;
 }
 
-.offset .container-fluid .row .col-md .card {
+.offset .container-fluid .row .col-md-6 .card {
     width: 100%;
     height: 100%;
     border: none;
 
 }
 
-.offset .container-fluid .row .col-md .card>.face {
+.offset .container-fluid .row .col-md-6 .card>.face {
     width: 100%;
     height: 100%;
     transition: .5s;
 
 }
 
-.offset .container-fluid .row .col-md .card>.face.face1 {
+.offset .container-fluid .row .col-md-6 .card>.face.face1 {
     position: relative;
     justify-content: center;
     align-items: center;
@@ -123,26 +123,26 @@ portfolio
     transform: translateY(50%);
 }
 
-.offset .container-fluid .row .col-md .card:hover>.face.face1 {
+.offset .container-fluid .row .col-md-6 .card:hover>.face.face1 {
     transform: translateY(0);
     background: rgb(110, 110, 110);
 }
 
-.offset .container-fluid .row .col-md .card>.face.face1 .content {
+.offset .container-fluid .row .col-md-6 .card>.face.face1 .content {
     transform: .5s;
 }
 
-.offset .container-fluid .row .col-md .card:hover>.face.face1 .content {
+.offset .container-fluid .row .col-md-6 .card:hover>.face.face1 .content {
     opacity: 1;
 
 }
 
-.offset .container-fluid .row .col-md .card .face.face1 .content img {
+.offset .container-fluid .row .col-md-6 .card .face.face1 .content img {
     max-width: 100%;
 }
 
 
-.offset .container-fluid .row .col-md>.card>.face.face2 {
+.offset .container-fluid .row .col-md-6>.card>.face.face2 {
     opacity: 0;
     position: relative;
     display: flex;
@@ -153,30 +153,100 @@ portfolio
     transform: translateY(-50%);
 }
 
-.offset .container-fluid .row .col-md .card:hover>.face.face2 {
+.offset .container-fluid .row .col-md-6 .card:hover>.face.face2 {
     transform: translateY(0);
     opacity: 1;
 }
 
-.offset .container-fluid .row .col-md .card>.face.face2 p {
+.offset .container-fluid .row .col-md-6 .card>.face.face2 p {
     margin: 0;
     padding: 0;
   
 }
 
-.offset .container-fluid .row .col-md .card>.face.face2 a {
+.offset .container-fluid .row .col-md-6 .card>.face.face2 a {
     display: inline-block;
     text-decoration: none;
+   padding:10px;
+   padding-right: 35px;
+   padding-left: 35px;
+   text-align: center;
+   background-color: #d9534f;
+
  
-    color: #333;
-    padding: 6px;
-    border: 1px solid rgb(216, 13, 13);
-    border-radius: 45%;
-    margin-right: 5%;  
+    color:#f7f7f7;
+    border: 1px solid rgb(108, 13, 216);
+    border-radius: 10%;
+    margin-right: 5%;
+
     
 }
 
-.offset .container-fluid .row .col-md .card>.face.face2 .content a:hover {    
+.offset .container-fluid .row .col-md-6 .card>.face.face2 .content a:hover {    
     color: rgb(161, 6, 6);
 }
+
+@media (max-width: 576px) {  
+  [class*="bag"] {    
+    Margin-bottom: 5%;
+    
+    
+}}
+
+@media (max-width: 768px) {  
+  [class*="bag"] { 
+    Margin-bottom: 25%;
+    
+    
+    
+}}
+
+
+@media (max-width: 992px) {  
+  [class*="bag"] {        
+    Margin-bottom: 10%;
+    }}
+
+
+    
+@media (max-width: 1198px) {  
+  [class*="bag"] {    
+    Margin-bottom: 5%;
+    
+    }}
+
+  
+
+    
+@media (max-width: 576px) {  
+  [class=" bag"] {    
+    margin-bottom: 5%;
+    
+    
+}}
+
+
+
+    
+@media (min-width: 768px) {  
+  [class=" last"] {    
+    margin-bottom: 115%;
+    
+    
+}}
+
+@media (min-width: 576px) {  
+  [class=" last"] {    
+    margin-bottom: 115%;
+    
+    
+}}
+
+
+
+/*
+portfolio
+
+*/
+
 

@@ -80,7 +80,7 @@ body {
   margin-top: -50px;
 }
 
-#faq .card {
+#faq .bag {
   border: #444;
 }
 
@@ -89,8 +89,8 @@ body {
   text-decoration: none;
 }
 
-#faq .card-body,
-#faq .card-header {
+#faq .bag-body,
+#faq .bag-header {
   background: #333;
 }
 
